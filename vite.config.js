@@ -1,5 +1,6 @@
 export default {
   build: {
-    sourcemap: false, // Desactiva los mapas de origen
+    sourcemap: false, 
+    publicDir: "public",// Desactiva los mapas de origen
   },
 };

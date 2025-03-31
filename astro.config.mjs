@@ -1,6 +1,9 @@
-import { defineConfig } from 'astro/config';
-
 export default defineConfig({
-  site: "https://Jbloca.github.io/Landing-CentroMedico/", // URL de GitHub Pages
-  base: "/Landing-CentroMedico/", // Debe incluir la barra inicial y final
-});
+    site: "https://tuusuario.github.io/Landing-CentroMedico/",
+    base: "/Landing-CentroMedico/", // Ruta base para GitHub Pages
+    output: 'static',
+    build: {
+      outDir: './dist',
+    },
+  });
+  
