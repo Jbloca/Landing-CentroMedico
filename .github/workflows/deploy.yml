@@ -49,8 +49,8 @@ jobs:
 
       - name: Copy Images
         run: |
-          mkdir -p dist/public/imagenes
-          cp -r public/imagenes/* dist/public/imagenes/
+          mkdir -p dist/public/imagen
+          cp -r public/imagen/* dist/public/imagen/
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Disable Jekyll
