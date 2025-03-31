@@ -42,9 +42,14 @@ jobs:
 
       - name: Build with Astro
         run: |
+          echo "Base path: ${{ steps.pages.outputs.base_path }}"  # Para verificar el valor de base_path
           npx astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Verify build output
+        run: ls -la dist/
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Copy Images
@@ -73,3 +78,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
